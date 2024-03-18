@@ -26,3 +26,20 @@ En el contexto de procesamiento de lenguaje natural, una palabra puede ser un t�
 Por ejemplo, en la frase “Hola, ¿cómo estás?”, hay cuatro palabras del prompt: “Hola”, “,”, “¿cómo” y “estás”. 
 Cada una de estas palabras contribuye al contexto y ayuda al modelo a generar respuestas coherentes.
 
+En ChatGPT, los tokens son unidades individuales de texto que se utilizan para representar palabras, caracteres o partes más pequeñas de un texto. Cada palabra, número, signo de puntuación y espacio en blanco se considera un token separado. Por ejemplo, la oración “Hola, ¿cómo estás?” se divide en los siguientes tokens:
+
+“Hola”
+“,”
+“¿cómo”
+“estás”
+Los tokens son la unidad básica que utiliza ChatGPT para calcular la longitud de un texto. A veces, un token se alinea con una palabra completa, pero no siempre. Puede incluir espacios finales, subpalabras y caracteres especiales. Por esta razón, el recuento de tokens suele ser diferente del recuento de palabras. Además, el número de tokens puede variar según el idioma. Por ejemplo, las palabras en español tienden a tener una proporción más alta de tokens por carácter, lo que hace que sea más costoso implementar la API para otros idiomas además del inglés.
+
+Para darte una idea de cómo funcionan los tokens, aquí tienes algunas reglas generales:
+
+1 token ≈ 4 caracteres en inglés o casi una palabra.
+100 tokens ≈ 75 palabras.
+1 o 2 oraciones ≈ 30 tokens.
+1 párrafo ≈ 100 tokens.
+1.500 palabras ≈ 2.048 tokens (aproximadamente 5,4 páginas).
+3.000 palabras ≈ 4.096 tokens (aproximadamente 10,8 páginas).
+El modelo GPT-3.5 de ChatGPT puede manejar hasta 4.096 tokens o alrededor de 8.000 palabras. GPT-4 supera esos números con 8.192 tokens, y los 32.768 tokens solo se ofrecen a unos pocos usuarios de prueba seleccionados por ahora.
